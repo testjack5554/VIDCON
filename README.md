@@ -15,7 +15,15 @@ Version: 5.1
 
 Python 3.12.4
 
+Name: websockets
+Version: 13.0.1
+
+Name: wsproto
+Version: 1.2.0
+
 Install the latest version of anaconda Framework and create a virtual env and install those modules.
+
+
 
 For versions
 ===============

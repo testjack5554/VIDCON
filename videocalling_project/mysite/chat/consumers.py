@@ -10,6 +10,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
             self.channel_name
         )
         print("Konnected --")
+        await self.accept()
     
     async def disconnect(self,close_code):
         await self.channel_layer.group_discard(
@@ -32,7 +33,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
         )
 
     async def send_message(self,event):
-        message = event['messgae']
+        message = event['message']
 
         await self.send(text_data=json.dumps({
             'message': message
